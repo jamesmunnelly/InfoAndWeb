@@ -1,1 +1,53 @@
-<h2>TESTING</h2>
+<div id="intro">
+
+  <p>
+	  The issue of securing the communication of data from those to whom it isn't intended is an age old one, as people have always found worth in stealing other people's information, whether it be for personal or finiancial gain. As a result of this, cryptography has also been used in some form or another for a very long time.
+
+  </p>
+
+	<p>
+		In this page, an outline of the the history of cryptography will be made and show how it has lead to the current state of using public key cryptography to encrypt vast amounts of data transmitted over the internet.
+	</p>
+
+</div>
+
+<h2 id="historyOrigins">The Origins Of Cryptography</h2>
+
+<p>
+	It is known for certain that encryption of data existed in one form or another since the first formal civilisations started settling. For example, is is recorded that Egyptian scribes used abnormal heiroglyphs to conceal messages from prying eyes. Furthermore, a very high profile usage of cryptography can be found in the Roman period, where Julius Caesar used what is now referred to as the <strong>Caesar Cipher</strong> to encrypt messages that he was sending regarding his military activities.
+</p>
+
+<p>
+	This was a relatively simple, yet effective algorithm. A message can be encrypted with the Caesar Cipher by going through it and shifting the characters back by three spaces in the alphabet. As shown below, to the naked eye, this renders the message as complete nonesense, making it not so immediately obvious what the message is meant to mean to anyone who intercepts the message without knowing the way in which it was encrypted.
+</p>
+
+
+<div class="captionedImage">
+	
+  <img src="img/history/cipherDiagram.png" alt="Cipher Diagram" />
+  <p>A diagramatical representation of the mappings of characters within the Caesar Cipher.</p>
+
+</div>
+
+<div class="captionedImage">
+
+  <img src="img/history/caesarCipher.png" alt="Caesar Cipher" />
+  <p>A genuine application of the Caesar Cipher, showing the transformation of plaintext to ciphertext.</p>
+
+</div>
+
+<h2 id="historySymVsAsym">Symmetric Keys &amp; Their Vulnerabilities</h2>
+
+<p>
+	In this case, the "key" is the fact that the characters in the message have been shifted by three spaces in the alphabet. This is an example of <strong>Symmetric Key Encryption</strong>, as the same key that is used to encrypt the data is also used to decrypt it. While symmetric key encryption (e.g. Blowfish) is still used for very basic, non-critical data, there is fundamental problem with using this technique for transferring data over the internet.
+</p>
+
+<p>
+	The problem of transferring data encrypted using symmetric key encryption is that it is very difficult to transfer a key to decrypt the data securely - if a message is sent in an unintelligible, encrypted form, but the exact key required to decrypt the data is sent along with it, the message could easily be decrypted by anyone who manages to intercept the decryption key. Due to this, symmetric key encryption is vulnerable to packet sniffing (using programs such as <a href="http://www.wireshark.org/">Wireshark</a> to steal and analyse data packets) or Man-in-the-Middle (MitM) attacks facilitated by techinques such as ARP (Address Resolution Protocol) Spoofing. The latter is particularly dangerous, as it has the potential to completely control the communication between two machines beyond their knowledge, allowing data to be modified to request keys in cases where they would not usually be required by a genuine host.
+</p>
+
+<h2 id="historyAsym">The Solution: Asymmetric Key Encryption</h2>
+
+<p>
+	The problems outlined with using symmetric keys on the internet can be alleviated by instead using a scheme where two distinct keys (known as the public and private keys) are used as opposed to one. These two keys are reliant on one another due to their <a href="#">mathematical relationship</a> - with only a single key, the data cannot be decrypted. This makes it much eaiser to securely transmit a key, as the interception of a single key cannot compromise the data's security.
+</p>
