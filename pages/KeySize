@@ -26,6 +26,7 @@ The most common way for determining the appropriate key size is to consult a sta
 <ul>
 <li> NIST, 2007 </li>
 <li> ECRYPT-II, 2010 </li>
+</ul>
 </p>
 
 <p>
@@ -36,7 +37,7 @@ The way the standards recommend key lengths is by  comparing them to symmetric k
 
 <div class="captionedImage">
 
-  <img src="img/keySize/ECRYPTII.png" alt="ECRYPT-II Standard />
+  <img src="img/ECRYPTII.png" alt="ECRYPT-II Standard />
   <p>ECRYPT-II key size recommandations</p>
 
 </div>
