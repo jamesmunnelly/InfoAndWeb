@@ -22,7 +22,6 @@ li {
 #page {
 	width: 1000px;
 	margin: 30px auto 0 auto;
-	background-color: red;
 }
 
 #navigation {
@@ -76,6 +75,7 @@ li {
 	width: 780px;
 	padding: 5px 10px 30px 10px;
 	background-color: rgb(250, 250, 250);
+	margin-bottom: 30px;
 }
 
 /* -----JOHN'S STUFF----- */
@@ -155,3 +155,47 @@ ul#navigation li.item {
 		color: white;
 	
 	}
+
+div#footer {
+
+	clear: both;
+	margin-left: 210px;
+	width: 800px;
+	height: 40px;
+	background-color: rgb(250, 250, 250);
+	text-align: center;
+
+	-webkit-border-top-left-radius: 20px;
+	border-top-left-radius: 20px;	
+	-webkit-border-top-right-radius: 20px;
+	border-top-right-radius: 20px;
+
+}
+
+	div#footer ul {
+	
+		padding-top: 10px;
+	
+	}
+
+	  div#footer li {
+	  
+		  list-style: none;
+		  display: inline;
+		  margin: 0;
+		  font-weight: bold;
+	  
+	  }
+
+	  div#footer li:after {
+	  
+		  content:">";
+		  margin: 0 10px;
+	  
+	  }
+
+	  div#footer li:last-child:after {
+	  
+		  content: "";
+	  
+	  }
