@@ -8,11 +8,15 @@ $(document).ready(function() {
 	$('.item').mouseout(function() {
 		$(this).children('.menuChild').hide();
 	});
+	linkLinks();
+	showPage($('#link0'));
+});
+
+function linkLinks() {
 	$('.link').mousedown(function() {
 		showPage(this);
 	});
-	showPage($('#link0'));
-});
+}
 
 /**
  * Shows the page content for the specified link (loading via AJAX)
@@ -22,7 +26,6 @@ $(document).ready(function() {
 function showPage(link) {
 	$(selectedTab).removeClass('selected');
 	$(link).addClass('selected');
-	$(link).parent().children('.menuChild').show();
 	selectedTab = link;
 
 	pageName = $(link).html();
@@ -30,6 +33,7 @@ function showPage(link) {
 	requestData("./pages/" + pageName.replace(/ /g, '') + ".html", function(requestObject) {
 		$('#pageTitle').html(pageName);
 		$('#content').html(requestObject.responseText);
+		linkLinks();
 	});
 }
 
