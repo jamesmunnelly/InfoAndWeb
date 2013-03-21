@@ -1,1 +1,42 @@
-<h2>TESTING</h2>
+<div id="intro">
+
+  <p>
+	 Cryptography is the practice of methods for keeping communication of information secret to a limited set that are authorized to access. Most of today cryptography relies on the fact that cryptographic algorithms are hard to break and reverse engineer.
+  </p>
+
+	
+</div>
+
+<h2 id="overviewHowWorks">How Cryptography Works &amp; Why Is Effective Today </h2>
+
+<p>
+Many algorithms, use the fact that one way mathematical functions are trivial to compute in one direction but is a very difficult computational problem in reverse. Prime number factorization is an example of a type of one way mathematical function that is used in the implementation of the <strong>RSA algorithm</strong>. </p>
+
+<p>
+The difficulty and complexity of the problem are in terms of the exponential time complexity O(n2) and in the classed in <strong>NP-intermediate</strong>. Algorithms that use the methodology of being very difficult to break and reverse engineer can be classed as computationally secure. So the security of these systems is dependent on the current limitations in practical computing.</p>
+
+
+
+
+
+<h2 id="secureSchemes">Cryptography &amp; schemes proved to be mathematically secure</h2>
+
+<p>
+	There are algorithms and schemes that exist that are information theoretically secure. These schemes cannot be broken even with unlimited computing power. The <strong>one-time pad </strong>is an example of this, however they have been proven to be quite difficult to implement in practice. This is due to the key used to encrypt the message is required to be greater or equal to the size of the message. The impracticality of communicating such a large key currently put these type of schemes in a limited set of use cases where the message is quite small and security is of utmost importance.  These mechanisms of cryptography are resistance to the future advancement in computational power that quantum computation may bring.
+</p>
+
+<div class="captionedImage">
+
+  <img src="img/overview/oneTimePad.jpg" alt="One Time Pad" />
+  <p>A physical representation of an encrypted One Time Pad </p>
+
+</div>
+
+
+
+
+<h2 id="present">Current use of Public key cryptography</h2>
+
+<p>
+	Public key cryptography is widely used today in secure Internet communication. The implementation of public key cryptography that is used in nearly all Internet browsers is the RSA algorithm. RSA stands for stands for Ron Rivest, Adi Shamir and Leonard Adleman, people who designated the algorithm in 1977. SSL(Secure Sockets Layer) and the newer TLS (Transport Layer Security) are based upon the RSA algorithm. TLS is an extensively used protocol in instant messaging, voice-over-IP (VoIP) and internet commerce.
+</p>
