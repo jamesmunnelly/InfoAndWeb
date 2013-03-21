@@ -1,0 +1,69 @@
+<div id="intro">
+
+  <p>
+
+One of the more difficult challenges when deciding to us public-key cryptography in an organisation is to decide the length of the keys which are to be used within the system. Longer keys mean a higher security but typically the cryptographic operation will take more time.
+
+  </p>
+
+
+</div>
+
+<h2 id="differentSchemes">Different Criptographic Schemes</h2>
+
+<p>
+Most symmetric cryptographic schemes do not allow the use of keys of different lengths.
+</p>
+
+<p>
+Public-key schemes are different as they typically have one design which can be used with keys of any length.
+</p>
+
+<h2 id="criptographicStandards">Criptographics Standards/h2>
+<p>
+The most common way for determining the appropriate key size is to consult a standard.
+<br>There are several standards which give key length recommendations for common public-key technologies:
+<ul>
+<li> NIST, 2007 </li>
+<li> ECRYPT-II, 2010 </li>
+</p>
+
+<p>
+The way the standards recommend key lengths is by  comparing them to symmetric keys with equivalent security and/or by giving an estimate for the length of time that the key will keep data secure.
+</p>
+
+
+
+<div class="captionedImage">
+
+  <img src="img/keySize/ECRYPTII.png" alt="ECRYPT-II Standard />
+  <p>ECRYPT-II key size recommandations</p>
+
+</div>
+
+
+<h2 id="dataValidity">Validity</h2>
+
+<p>
+The validity period tells you how long data that has been protected with a key of a certain length can be considered secure, for example after the expiry date, data secured by a key can no longer be considered secure.
+
+</p>
+<p>
+ There are good reasons to change keys before the expiry date, for example because it reduces the impact of key exposure. 
+</p>
+
+<p>
+The use of long keys should not be thought of as a substitute for good key management and key lifecycle practices.
+</p>
+
+<h2 id="keySizesInPublicCriptograpy">Key Sizes In Public-Key Criptography</h2>
+
+<p>
+For public-key cryptography: given a public key, and sufficient time, an attacker can always deduce the corresponding private key and thus break the scheme. The best we could ever hope to achieve is to show that an attacker is unlikely to break the scheme in a given period of time. 
+
+</p>
+
+<p>
+Secure key sizes are estimated by examining the length of time that the best-known algorithm would take to break a random instance of the primitive. So, for example, when 
+estimating secure key sizes for the RSA primitive, we investigate the time that the best-known algorithm would take to decrypt a randomly-chosen ciphertext for a randomly chosen public key. 
+</p>
