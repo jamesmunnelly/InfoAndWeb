@@ -1,0 +1,33 @@
+<div id="intro">
+	<p>
+		The PlayStation 3 implemented eliptical curve cryptography to sign it's firmware files. However, they made a fatal mistake in their implementation that cost them tens of millions of dollars and cause irrepareable damage to their company.
+	</p>
+	<div class="captionedImage">
+	
+  		<img src="img/ps3/ps3.jpg" alt="PlayStation 3" title="Sony PlayStation 3" />
+  		<p>The Sony PlayStation 3 was kept secure for longer than any other console sold</p>
+	</div>
+
+</div>
+
+<h2 id="historyOrigins">Security Downfall</h2>
+
+<p>
+	The PlayStation 3 was long thought to be unhackable. After 3 or 4 years, most had given up and others were happy with the linux usage they had. After some hardware dumps of their higher level keys, a team called failoverfl0w were able to discover that Sony used a constant number in place of a random number in their eliptical curve cryptography functions used to sign their firmware.
+</p>
+
+<div class="captionedImage">
+	<img src="http://imgs.xkcd.com/comics/random_number.png" alt="Random Number" title="RFC 1149.5 specifies 4 as the standard IEEE-vetted random number." />
+	<p>RFC 1149.5 specifies 4 as the standard IEEE-vetted random number.</p>
+</div>
+
+<p>
+	This allowed failoverfl0w to apply some simple mathematics by taking some test data, encrypting it, taking the output and some other known variables used in the cryptography functions, include the mistakenly constant random number and rearrange to solve for Sony's private key.
+</p>
+<p>
+	Public Private Keys! This was the disaster situation for Sony, and it meant that failoverfl0w were able to write their own firmware and sign it in order to make it run on the system.
+</p>
+
+<div id="outro">
+	<p>To read more on failoverfl0ws explot of the PlayStation 3, click <a href="http://events.ccc.de/congress/2010/Fahrplan/events/4087.en.html">here</a></p>
+</div>

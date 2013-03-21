@@ -94,7 +94,7 @@ p {
 
 }
 
-div#intro  p {
+div#intro  p, div#outro p {
 
 	font-weight: bold;
 
