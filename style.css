@@ -199,3 +199,26 @@ div#footer {
 		  content: "";
 	  
 	  }
+
+	  /*Mikes*/
+
+div#RSAsteps{
+	
+	font-family: 'Calibri', Verdana, sans-serif;
+	text-align: left;
+	padding: 30px;
+	margin: 7px; 
+	
+}
+
+div#encryption{
+
+	background-color: #FF9C9C;
+	color: red;
+}
+
+div#decryption{
+
+	background-color: #9CFFA9;
+	color: green;
+}

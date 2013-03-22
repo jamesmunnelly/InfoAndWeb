@@ -1,0 +1,26 @@
+<div id="intro">
+
+	<p>The main concept behind RSA's security, is the difficulty in factorising the product of two large prime numbers. Without the private key, messages encoded using the public key would be completely irretrievable. However, the methods behind creating these keys is very complex.</p>
+
+</div> 
+
+<h3 id="keyGeneration">Key Generation</h3> 
+
+<div id="RSAsteps">
+	<ol id="steps">
+		<li>Two extremely large prime numbers 'P' & 'Q' are found, and then multiplied together to find their product 'N'. 'N' will be used as the modulus for the public and private keys.</li>
+		<li>We then apply Euler's Totient Function to 'N', this counts the number of integers less than 'N' which are prime relative to 'N'</br>This example shows Eulers applied to 36</br><img src="img/RSA/eulersfunctionWikipedia.jpg" alt="Eulers Totient" title="An example of Euler's Totient function"/></li>
+		<li>You can then find your public key, which will be between '1 < p < E(N)', where 'p' is the public key and 'E(N)' is the Euler Totient of N. 'p' and 'E(N)' must be co-prime, meaning the only positive integer that divides into both of them is '1'</li>
+		<li>We can now find our private key 'k', which is the 'Modular Multiplicative inverse' of <i>'p * modulus(E(N))'</i>. This can only exist if 'k' and 'E(N)' are co-prime. Similarily  'k*p = modulus(E(N))'. We now have our public and private keys</li>
+
+	</ol>
+	<div class="captionedImage">
+	
+  		<img src="img/RSA/keys.jpg" title="Public and Private keys!"/>
+  		<p>Public and Private key!</p>
+	</div>
+		
+</div>
+
+<p><i>Example equation taken from <a href="http://en.wikipedia.org/wiki/Euler%27s_totient_function">"http://en.wikipedia.org/wiki/Euler%27s_totient_function"</a></i></p>
+	
